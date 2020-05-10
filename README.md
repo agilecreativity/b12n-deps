@@ -1,5 +1,9 @@
 # b12n-deps
 
+[![Clojars Project](https://img.shields.io/clojars/v/net.b12n/deps.svg)](https://clojars.org/net.b12n/deps)
+[![Dependencies Status](https://jarkeeper.com/agilecreativity/b12n-deps/status.svg)](https://jarkeeper.com/agilecreativity/b12n-deps)
+![ClojarsDownloads](https://img.shields.io/clojars/dt/net.b12n/deps)
+
 A Clojure library designed to add dependency to your project at runtime.
 It uses [alembic](https://github.com/pallet/alembic) behind the scene.
 
@@ -17,6 +21,7 @@ Then from your Clojure file you can then try something like
 
 ```clojure
 (require '[b12n.deps.core :refer [add-depency]]')
+(require '[alembic.still :refer [distill lein load-project]])
 
 ;; Add new dependency to your session without adding it to your project.clj or deps.edn
 (add-dependency :hara/io.file "3.0.12")   ;;=> nil
@@ -37,7 +42,7 @@ Then from your Clojure file you can then try something like
 ;; See: https://github.com/pallet/alembic/blob/develop/src/alembic/still.clj#L299
 
 ;; Tips: If you are using Emacs and install clj-refactor you can use this like
-;; M-x cljr-add-project-dependency 
+;; M-x cljr-add-project-dependency
 ;; Then you can use this dependency permanently in your project
 
 (load-project "project.clj")    ;;=> see your REPL

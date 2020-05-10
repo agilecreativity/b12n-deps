@@ -23,8 +23,9 @@
 
 (comment
   ;; Add new dependency to your session without adding it to your project.clj or deps.edn
-  #_
-  (require '[alembic.still :refer [distill lein load-project]])
+  (require '[alembic.still :refer [distill
+                                   lein
+                                   load-project]])
   (require '[b12n.deps.core :refer [add-dependency]])
 
   (add-dependency :hara/io.file "3.0.12")   ;;=> nil
